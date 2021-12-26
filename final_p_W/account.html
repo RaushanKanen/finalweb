@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+    <link rel="stylesheet" href="products.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+</head>
+<body>
+  
+
+    
+    <div class="container">
+        <div class="navbar">
+
+            <div class="logo">
+                <img src="/images/logo.png" alt="logo" width="140px">
+            </div>
+            <nav>
+                <ul id="MenuItems">
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="products.html">Продукция</a></li>
+                    <li><a href="infor.html">Инфо</a></li>
+                    <li><a href="contact.html">Контакты</a></li>
+                    <li><a href="account.html">Аккаунт</a></li>
+    
+                </ul>
+            </nav>
+            <button onclick="document.location='cart.html'" style="border: 0; "><img src="images/icona.jpg" width="30px" height="30px"></button>
+     
+        <img src="/images/menu.png" class="menu-icon" onclick="menutoggle()" >
+        </div>
+    
+        
+    </div>
+
+
+ <!-------accoun page----->
+ <div class="account-page">
+     <div class="container">
+         <div class="row">
+             <div class="col-2">
+                 <img src="/images/acc.png" width="100%">
+             </div>
+            <div class="col-2">
+                <div class="form-container">
+                    <div class="form-btn">
+                        <span onclick="login()">Вход</span>
+                        <span onclick="register()">Регистрация</span>
+                        <hr id="Indicator"> 
+
+                    </div>
+<form id="LoginForm" >
+    <input type="text" placeholder="Пользователь">
+    <input type="password" placeholder="пароль">
+    <button type="submit " class="btn">Вход</button>
+    <a href=""> Забыли пароль</a>
+</form>
+<form id="RegForm" >
+    <input type="text" placeholder="Пользователь">
+    <input type="email" placeholder="email">
+    <input type="password" placeholder="пароль">
+    <button type="submit " class="btn">Регистрация</button>
+   
+</form>
+                </div>
+            </div>
+         </div>
+     </div>
+ </div>
+  
+ 
+
+  
+
+
+
+    <!-----oplata----->
+    <div class="oplata">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="/images/kaspi.png" alt="">
+                </div>
+               
+                <div class="col-5">
+                    <img src="/images/halyk.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="/images/forte.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="/images/master.svg" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="/images/visa.png" alt="">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+<!----footer----->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Быстрее делайте заказ!!!  <i class="fa fa-smile" style="color: white;" ></i> </h3>
+              
+                <p>Заказ доставляется в течении 1-2 дня. Оплатить можно по выше показынными картами</p>
+            </div>
+            <div class="footer-col-2">
+                <img src="/images/black-logo.png" alt="">
+           <p style="font-family: 'Caveat'">Самые лучшие вкусняшки только у нас!!!</p>
+            </div>
+            <div class="footer-col-3">
+                <h3>Follow us</h3>
+            <ul>
+                <li>Instagram 
+                
+                </li>
+                <li>vkontakte</li>
+                <li>Facebook</li>
+                
+                <button style="background-color: black; color:  white ;">Healthy_sweets</button>
+            </ul>
+            </div>
+        </div>
+<hr>
+<p class="autor">Kanen Raushan id200103510</p>
+    </div>
+</div>
+    
+
+<!--js for toogle menu-->
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+    MenuItems.style.maxHeight = "0px"
+    function menutoggle(){
+        if(MenuItems.style.maxHeight == "0px"){
+
+            MenuItems.style.maxHeight= "200px";
+
+        }
+        else{
+            MenuItems.style.maxHeight="0px";
+        }
+    }
+</script>
+
+
+<!--js for toogle toggle Form-->
+<script>
+    var LoginForm=document.getElementById("LoginForm");
+    var RegForm=document.getElementById("RegForm");
+    var Indicator=document.getElementById("Indicator");
+
+    function register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        RegForm.style.transform = "translateX(300px)";
+        LoginForm.style.transform = "translateX(300px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+
+</script>
+
+
+</body>
+</html>
